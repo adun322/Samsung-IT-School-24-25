@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Инициализация элементов
         number1 = findViewById(R.id.number1);
         number2 = findViewById(R.id.number2);
         result = findViewById(R.id.result);

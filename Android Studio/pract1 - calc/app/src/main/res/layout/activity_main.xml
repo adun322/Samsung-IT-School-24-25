@@ -1,94 +1,88 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/number1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/hint2"
-        android:inputType="numberDecimal"
+        android:id="@+id/number1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="numberDecimal" />
 
     <EditText
+        android:layout_marginTop="20dp"
         android:id="@+id/number2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/hint1"
-        android:inputType="numberDecimal"
+        android:hint="@string/hint2"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/number1"
-        app:layout_constraintVertical_chainStyle="packed" />
+        android:inputType="numberDecimal" />
 
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_subtract"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="+"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_subtract"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number2" />
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/btn_subtract"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="-"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_multiply"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/btn_add"
-        app:layout_constraintTop_toBottomOf="@+id/number2" />
+        <Button
+            android:id="@+id/btn_multiply"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="*" />
 
-    <Button
-        android:id="@+id/btn_multiply"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="*"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_divide"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/btn_subtract"
-        app:layout_constraintTop_toBottomOf="@+id/number2" />
+        <Button
+            android:id="@+id/btn_divide"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="/" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_divide"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <FrameLayout
         android:layout_marginTop="20dp"
-        android:text="/"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/btn_multiply"
-        app:layout_constraintTop_toBottomOf="@+id/number2" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="@string/result"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_add"
-        app:layout_constraintVertical_bias="0.2" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/result"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</LinearLayout>
