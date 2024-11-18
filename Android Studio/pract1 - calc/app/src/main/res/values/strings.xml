@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">android-practice1</string>
+    <string name="result">Result:</string>
+    <string name="hint1">3333</string>
+    <string name="hint2">1234</string>
+</resources>
