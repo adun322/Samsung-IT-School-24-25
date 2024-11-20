@@ -36,11 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 String us = username.getText().toString();
                 String pa = password.getText().toString();
 
-                // Add your authentication logic here. Example:
                 if (us == usern && pa == passw) {
                     Toast.makeText(MainActivity.this, "Nice", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Incorrect username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Incorrect username or passw  ord", Toast.LENGTH_SHORT).show();
                 }
             }
         });
