@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        
+
         sign_in = findViewById(R.id.sign_in_button);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 String us = username.getText().toString();
                 String pa = password.getText().toString();
 
-                if (us == usern && pa == passw) {
+                if (us.equals(usern) && pa.equals(passw)) {
                     Toast.makeText(MainActivity.this, "Nice", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Incorrect username or passw  ord", Toast.LENGTH_SHORT).show();
