@@ -16,8 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     final String usern = "abc", passw = "123";
-    Button sign_in = findViewById(R.id.sign_in_button);
-    EditText username = findViewById(R.id.username), password = findViewById(R.id.password);
+    Button sign_in;
+    EditText username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        
+        sign_in = findViewById(R.id.sign_in_button);
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
 
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
