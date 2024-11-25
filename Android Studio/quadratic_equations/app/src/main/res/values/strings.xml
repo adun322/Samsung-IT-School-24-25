@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">quadratic_equations</string>
+    <string name="enter_c">Enter C</string>
+    <string name="enter_b">Enter B</string>
+    <string name="enter_a">Enter A</string>
+    <string name="complex_field">Ответ лежит в комплексной плоскости</string>
+    <string name="calculate">Calculate</string>
+    <string name="complex_plane">the solution lies in the complex plane</string>
+</resources>
